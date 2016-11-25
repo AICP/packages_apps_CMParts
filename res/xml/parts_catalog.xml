@@ -99,4 +99,9 @@
           android:fragment="org.cyanogenmod.cmparts.power.PerfProfileSettings"
           cm:xmlRes="@xml/perf_profile_settings" />
 
+      <part android:key="gestures_settings"
+        android:title="@string/gestures_pref_title"
+        android:fragment="org.cyanogenmod.cmparts.input.GesturesSettings"
+        cm:xmlRes="@xml/gestures_settings" />
+
 </parts-catalog>
