@@ -575,4 +575,7 @@
     <string name="gestures_letter_z_title">Telephone</string>
     <string name="gestures_letter_z_summary">Draw letter \"Z\" to open dialer</string>
 
+    <!-- Sounds: Vibrator intensity -->
+    <string name="vibrator_intensity_title">Vibrator intensity</string>
+    <string name="vibrator_warning">Values higher than %1$d%% are not recommended</string>
 </resources>
