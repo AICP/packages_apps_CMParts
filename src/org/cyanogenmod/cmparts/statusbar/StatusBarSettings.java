@@ -271,20 +271,20 @@ public class StatusBarSettings extends SettingsPreferenceFragment
         new Handler().post(new Runnable() {
             @Override
             public void run() {
-                String clockStyle = mStatusBarClock.getValue();
+                //String clockStyle = mStatusBarClock.getValue();
                 int showDate = Settings.System.getInt(getActivity()
                         .getContentResolver(), Settings.System.STATUS_BAR_DATE, 0);
-                if ("0".equals(clockStyle)) {
+                /*if ("0".equals(clockStyle)) {
                     mStatusBarDate.setEnabled(false);
                     mStatusBarDateStyle.setEnabled(false);
                     mStatusBarDatePosition.setEnabled(false);
                     mStatusBarDateFormat.setEnabled(false);
-                } else {
+                } else {*/
                     mStatusBarDate.setEnabled(true);
                     mStatusBarDateStyle.setEnabled(showDate != 0);
                     mStatusBarDatePosition.setEnabled(showDate != 0);
                     mStatusBarDateFormat.setEnabled(showDate != 0);
-                }
+                //}
             }
         });
     }
