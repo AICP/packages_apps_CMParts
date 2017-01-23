@@ -247,9 +247,6 @@ public class StatusBarSettings extends SettingsPreferenceFragment
                 }
             }
             return true;
-        } else if (preference == mStatusBarClock) {
-            setStatusBarDateDependencies();
-            return true;
         } else {
             int batteryStyle = Integer.valueOf((String) newValue);
             enableStatusBarBatteryDependents(batteryStyle);
@@ -268,25 +265,19 @@ public class StatusBarSettings extends SettingsPreferenceFragment
     }
 
     private void setStatusBarDateDependencies() {
-        new Handler().post(new Runnable() {
-            @Override
-            public void run() {
-                String clockStyle = mStatusBarClock.getValue();
-                int showDate = Settings.System.getInt(getActivity()
-                        .getContentResolver(), Settings.System.STATUS_BAR_DATE, 0);
-                if ("0".equals(clockStyle)) {
-                    mStatusBarDate.setEnabled(false);
-                    mStatusBarDateStyle.setEnabled(false);
-                    mStatusBarDatePosition.setEnabled(false);
-                    mStatusBarDateFormat.setEnabled(false);
-                } else {
-                    mStatusBarDate.setEnabled(true);
-                    mStatusBarDateStyle.setEnabled(showDate != 0);
-                    mStatusBarDatePosition.setEnabled(showDate != 0);
-                    mStatusBarDateFormat.setEnabled(showDate != 0);
-                }
-            }
-        });
+        int showDate = Settings.System.getInt(getActivity()
+                .getContentResolver(), Settings.System.STATUS_BAR_DATE, 0);
+        /*if (false) {// todo: check whether clock is hidden
+            mStatusBarDate.setEnabled(false);
+            mStatusBarDateStyle.setEnabled(false);
+            mStatusBarDatePosition.setEnabled(false);
+            mStatusBarDateFormat.setEnabled(false);
+        } else {*/
+            mStatusBarDate.setEnabled(true);
+            mStatusBarDateStyle.setEnabled(showDate != 0);
+            mStatusBarDatePosition.setEnabled(showDate != 0);
+            mStatusBarDateFormat.setEnabled(showDate != 0);
+        //}
     }
 
     private void parseClockDateFormats() {
