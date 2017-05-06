@@ -416,6 +416,7 @@
   <string name="status_bar_battery_percentage_default">Не показывать</string>
   <string name="status_bar_battery_percentage_text_inside">Внутри значка</string>
   <string name="status_bar_battery_percentage_text_next">Рядом со значком</string>
+    <!-- Status bar - Battery charging color -->
   <!-- Status bar - icon blacklist -->
   <string name="status_bar_icons_title">Значки в строке состояния</string>
   <string name="status_bar_icons_summary">Настройка видимости значков</string>
@@ -506,7 +507,8 @@
   <string name="expanded_desktop_style_hide_navigation">Скрывать панель навигации</string>
   <string name="expanded_desktop_style_hide_both">Скрывать строку состояния и панель навигации</string>
   <string name="expanded_desktop_nothing_to_show_text">Выключите, чтобы настроить режим расширенного рабочего стола для каждого приложения</string>
-  <!-- Sounds: Charging sounds -->
+    <!-- Statusbar clock font style -->
+
   <!-- Gestures: Touchscreen gestures -->
   <string name="touchscreen_gesture_settings_title">Жесты сенсорного экрана</string>
   <string name="touchscreen_gesture_settings_summary">Настройка жестов сенсорного экрана для выполнения действий</string>
