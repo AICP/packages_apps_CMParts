@@ -107,11 +107,4 @@
         <item name="android:actionBarStyle">@style/Theme.ActionBar</item>
     </style>
 
-    <!-- Used to color the switch bar controls -->
-    <style name="ThemeOverlay.SwitchBar" parent="@android:style/ThemeOverlay">
-        <!-- Used by controls, e.g. CheckBox, ProgressBar, etc. -->
-        <item name="android:colorAccent">@color/switch_accent_color</item>
-        <item name="switchBarBackgroundColor">@color/switchbar_background_color</item>
-    </style>
-
 </resources>
